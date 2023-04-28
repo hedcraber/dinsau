@@ -11,8 +11,8 @@ separ_x_1 = ((-math.sqrt(3) - 1)/2) * separ_y
 separ_x_2 = ((math.sqrt(3) - 1)/2) * separ_y
 
 xdot = yvalues
-x2_1dot = 2 * xvalues + 2 * yvalues  # x2' = 2x1 + 2x2
-x2_2dot = 6 * xvalues + 2 * yvalues  # x2' = 6x1 + 2x2
+x2_1dot = -6 * xvalues + 2 * yvalues  # x2' = -6x1 + 2x2
+x2_2dot = -2 * xvalues + 2 * yvalues  # x2' = -2x1 + 2x2
 phasePlane = xvalues * (yvalues + 3 * xvalues)
 x2_1dot[phasePlane < 0] = np.nan  # убираем всё, что не подходит под условие первой системы
 x2_2dot[phasePlane > 0] = np.nan  # убираем всё, что не подходит под условие второй системы
